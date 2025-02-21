@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  --color-Almost-White: hsl(0, 0%, 98%);
+  --color-Medium-Gray: hsl(0, 0%, 41%);
+  --color-Almost-Black: hsl(0, 0%, 8%);
+  --color-blue-hsl: hsl(228, 45%, 44%);
+
+  --font-epilogue: "Epilogue";
+
+  --breakpoint-tablet: 48rem;
+  --breakpoint-desktop: 64rem;
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("../assets/fonts/Epilogue/Epilogue-VariableFont_wght.ttf");
+}
+
+body {
+  @apply font-epilogue bg-Almost-White text-Almost-Black text-lg;
+}
+
+button {
+  @apply font-epilogue bg-Almost-White cursor-pointer text-Medium-Gray text-lg;
+}
+
+header {
+  @apply flex items-center justify-between mx-4 mt-4 mb-6 desktop:mt-6 desktop:mx-20 desktop:mb-16;
+
+  .hamburger-menu {
+    @apply cursor-pointer tablet:hidden;
+  }
+
+  nav {
+    @apply text-Medium-Gray tablet:ml-6 tablet:block tablet:w-full tablet:h-full desktop:ml-12;
+    /* hidden absolute left-0 top-0  h-[850px] w-full*/
+    .back {
+      @apply bg-Medium-Gray absolute top-0 left-0 w-full h-[780px] opacity-75 tablet:hidden;
+    }
+
+    .front {
+      @apply bg-Almost-White w-60 absolute right-0 h-[780px] p-6 tablet:static tablet:w-full tablet:flex tablet:h-full tablet:p-0 justify-between;
+
+      .menu-ul {
+        @apply tablet:flex tablet:items-center tablet:w-[378px] tablet:justify-between;
+      }
+    }
+
+    .img-close-container {
+      @apply flex justify-end cursor-pointer tablet:size-8 tablet:hidden;
+    }
+
+    li {
+      @apply cursor-pointer mb-6 tablet:m-0 tablet:mb-4;
+    }
+
+    img {
+      @apply inline-flex;
+    }
+
+    .features-img {
+      @apply mr-4;
+    }
+
+    .features-container,
+    .company-container {
+      @apply tablet:relative;
+    }
+
+    .features-ul,
+    .company-ul {
+      @apply ml-6 tablet:border-2 tablet:border-red-600 tablet:absolute tablet:top-10 tablet:bg-Almost-White tablet:shadow-[0_10px_40px_rgba(0,0,0,0.15)] tablet:rounded-lg tablet:py-2 tablet:px-4 tablet:text-lg tablet:m-0;
+    }
+
+    .features-ul {
+      @apply tablet:w-40 tablet:end-4 tablet:right-1 tablet:h-46;
+    }
+    /* tablet:left-6 */
+    .company-ul {
+      @apply tablet:w-32 tablet:start-0 tablet:left-1 tablet:h-36;
+    }
+
+    /* tablet:left-56 */
+
+    .submenu-btn {
+      @apply w-28 h-7 my-6 flex justify-between items-center tablet:m-0 tablet:justify-evenly;
+    }
+
+    .btns-container {
+      @apply absolute bottom-28 tablet:flex tablet:justify-between tablet:static tablet:w-44;
+    }
+
+    .login-btn {
+      @apply block mx-auto mb-4 tablet:m-0;
+    }
+
+    .register-btn {
+      @apply border border-Almost-Black w-48 h-11 rounded-2xl tablet:w-28;
+    }
+  }
+}
+
+main {
+  @apply flex flex-col-reverse desktop:flex-row desktop:justify-between desktop:mr-45 desktop:mb-4 desktop:ml-46 desktop:relative;
+  /* w-full */
+
+  .hero-image {
+    @apply mb-12 desktop:m-0;
+  }
+
+  h1 {
+    @apply text-center text-4xl font-bold mb-4 tablet:text-5xl desktop:text-left desktop:text-7xl desktop:mt-34 desktop:mb-12 desktop:w-[480px];
+  }
+
+  p {
+    @apply text-center text-base/6 text-Medium-Gray my-4 mb-6 p-4 tablet:w-[600px] tablet:my-10 tablet:mx-auto desktop:text-left desktop:text-lg desktop:w-[445px] desktop:mb-6 desktop:mx-0 desktop:p-0;
+  }
+
+  button {
+    @apply block bg-Almost-Black text-Almost-White w-36 h-12 rounded-2xl mx-auto mb-14 hover:bg-Almost-White hover:text-Almost-Black hover:border tablet:w-40 tablet:h-14 tablet:text-lg tablet:mb-12 desktop:mx-0 desktop:mt-12 desktop:mb-24;
+  }
+
+  .logos-container {
+    @apply flex items-center justify-between px-4 desktop:absolute desktop:bottom-0 desktop:w-[450px];
+
+    .databiz {
+      @apply w-20;
+    }
+
+    .audiophile {
+      @apply w-14;
+    }
+
+    .meet {
+      @apply w-16;
+    }
+
+    .maker {
+      @apply w-16;
+    }
+  }
+
+  picture {
+    @apply tablet:w-4/5 tablet:my-6 tablet:mx-auto desktop:w-[500px] desktop:m-0;
+  }
+}
+
+footer {
+  @apply w-full mt-8;
+
+  .attribution {
+    @apply text-[11px] text-center;
+
+    .attribution-link {
+      @apply text-blue-hsl;
+    }
+  }
+}
+
+/* bajar resposively app, se descarga y se ingresa la direccion url local de la pag y muestra todas las vistas responsive. hora 10:05  
+
+y aquasnap, para hacer transparente una ventana la parte gratuita */

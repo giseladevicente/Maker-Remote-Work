@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+  <body>
+    <header>
+      <img src="../assets/images/logo.svg" alt="logo" />
+      <img
+        class="hamburger-menu"
+        src="../assets/images/icon-menu.svg"
+        alt="icon-menu"
+      />
+
+      <nav id="navbar" class="hidden">
+        <div class="back"></div>
+        <div class="front">
+          <div class="img-close-container">
+            <img
+              class="close-btn"
+              src="../assets/images/icon-close-menu.svg"
+              alt="icon-close"
+            />
+          </div>
+          <ul class="menu-ul">
+            <li class="features-container">
+              <button id="features-btn" class="submenu-btn">
+                Features
+                <img
+                  id="features-btn-arrow"
+                  src="../assets/images/icon-arrow-down.svg"
+                  alt="Arrow Down icon"
+                />
+              </button>
+
+              <ul class="features-ul hidden">
+                <li>
+                  <img
+                    class="features-img"
+                    src="../assets/images/icon-todo.svg"
+                    alt="Todo List icon"
+                  />Todo List
+                </li>
+                <li>
+                  <img
+                    class="features-img"
+                    src="../assets/images/icon-calendar.svg"
+                    alt="Calendar icon"
+                  />Calendar
+                </li>
+                <li>
+                  <img
+                    class="features-img"
+                    src="../assets/images/icon-reminders.svg"
+                    alt="Reminders icon"
+                  />Reminders
+                </li>
+                <li>
+                  <img
+                    class="features-img"
+                    src="../assets/images/icon-planning.svg"
+                    alt="Planning icon"
+                  />Planning
+                </li>
+              </ul>
+            </li>
+            <li class="company-container">
+              <button id="company-btn" class="submenu-btn">
+                Company
+                <img
+                  id="company-btn-arrow"
+                  src="../assets/images/icon-arrow-down.svg"
+                  alt="Arrow Down icon"
+                />
+              </button>
+
+              <ul class="company-ul hidden">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+          <div class="btns-container">
+            <button class="login-btn">Login</button>
+            <button class="register-btn">Register</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1>Make remote work</h1>
+
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+
+        <button>Learn more</button>
+
+        <div class="logos-container">
+          <img
+            class="databiz"
+            src="../assets/images/client-databiz.svg"
+            alt="Databiz logo"
+          />
+          <img
+            class="audiophile"
+            src="../assets/images/client-audiophile.svg"
+            alt="Audiophile logo"
+          />
+          <img
+            class="meet"
+            src="../assets/images/client-meet.svg"
+            alt="Meet logo"
+          />
+          <img
+            class="maker"
+            src="../assets/images/client-maker.svg"
+            alt="Maker logo"
+          />
+        </div>
+      </section>
+
+      <picture>
+        <source
+          srcset="../assets/images/image-hero-mobile.png"
+          media="(max-width: 1023px)"
+        />
+
+        <source
+          srcset="../assets/images/image-hero-desktop.png"
+          media="(min-width: 1024px)"
+        />
+
+        <img
+          class="hero-image"
+          src="../assets/images/image-hero-mobile.png"
+          alt="Hero image"
+        />
+      </picture>
+    </main>
+
+    <footer id="footer-id">
+      <div class="attribution">
+        Challenge by
+        <a
+          class="attribution-link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">De Vicente Gisela</a>.
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
